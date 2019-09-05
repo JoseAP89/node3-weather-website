@@ -1,5 +1,3 @@
-console.log("scrpit is loading!");
-
 const weatherForm = document.querySelector("Form");
 const search = document.querySelector("input");
 let lat = document.querySelector("#latitude");

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>{{name}}</p>
+    </div>
+    <form>
+        <div class="form-group">
+            <label >Write down the location:</label><br>
+            <input type="text" class="form-control" placeholder="Location">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <p id="err" class="alert alert-light" role="alert"></p>
+    <div class="card" style="width: 20rem;">
+        <ul class="list-group">
+        <li class="list-group-item"><p id="latitude" class="list-group-item">Latitude</p></li>
+            <li class="list-group-item"><p id="longitude" class="list-group-item">Longitude</p></li>
+            <li class="list-group-item"><p id="location" class="list-group-item">Location</p></li>
+            <li class="list-group-item"><p id="probRain" class="list-group-item">Probability of rain</p></li>
+            <li class="list-group-item"><p id="summary" class="list-group-item">Summary</p></li>
+            <li class="list-group-item"><p id="temperature" class="list-group-item">Temperature</p></p></li>
+        </ul>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+<footer>
+    {{>footer}}
+</footer>
+</html> 

@@ -21,7 +21,7 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirPath));
 
 app.get("", (req, res) => {
-    res.render(viewsPath+"\\index.hbs",{
+    res.render(viewsPath+"/index.hbs",{
         title:"Weather app",
         name: "Jose"
     });
@@ -46,26 +46,26 @@ app.get("/weather", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-    res.render(viewsPath+"\\about.hbs",{
+    res.render(viewsPath+"/about.hbs",{
         title:"About me",
         name: "-> Jose Alvarez Pumarino"
     });
 });
 app.get("/help", (req, res) => {
-    res.render(viewsPath+"\\help.hbs",{
+    res.render(viewsPath+"/help.hbs",{
         title:"Help page",
         name: "-> Page to help users"
     });
 });
 app.get("/help/*", (req, res) => {
-    res.render(viewsPath+"\\404.hbs",{
+    res.render(viewsPath+"/404.hbs",{
         title:"No page found inside help page",
         name: "Jose Alvarez Pumarino",
         errorMessage: "Look for a valid url."
     });
 });
 app.get("*", (req, res) => {
-    res.render(viewsPath+"\\404.hbs",{
+    res.render(viewsPath+"/404.hbs",{
         title:"No page found",
         name: "Jose Alvarez Pumarino",
         errorMessage: "Look for a valid url."

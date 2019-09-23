@@ -6,6 +6,7 @@ let loc = document.querySelector("#location");
 let prob = document.querySelector("#probRain");
 let info = document.querySelector("#summary");
 let temp = document.querySelector("#temperature");
+let humid = document.querySelector("#humidity");
 let err_msg = document.querySelector("#err");
 
 weatherForm.addEventListener("submit", (e)=>{
@@ -27,6 +28,7 @@ weatherForm.addEventListener("submit", (e)=>{
                 prob.textContent = `Probability of Rain: ${Number(dataFetched.dataF.probRain)*100}%` ;
                 info.textContent = `Summary: ${dataFetched.dataF.summary}` ;
                 temp.textContent = `Temperature: ${dataFetched.dataF.temperature}°C` ;
+                humid.textContent = `Humidity: ${dataFetched.dataF.humidity}` ;
             }
         });
     });
